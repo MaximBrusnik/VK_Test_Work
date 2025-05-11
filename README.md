@@ -47,7 +47,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/yourusername/pubsub.git
+git clone https://github.com/MaximBrusnik/VK_Test_Work
 cd pubsub
 ```
 
