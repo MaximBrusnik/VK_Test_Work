@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package pubsub;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "awesomeProject3/pkg/proto";
+
+service PubSub {
+  // Subscribe creates a subscription to events for the given key
+  rpc Subscribe(SubscribeRequest) returns (stream Event);
+
+  // Publish publishes an event to all subscribers of the given key
+  rpc Publish(PublishRequest) returns (google.protobuf.Empty);
+}
+
+message SubscribeRequest {
+  string key = 1;
+}
+
+message PublishRequest {
+  string key = 1;
+  string data = 2;
+}
+
+message Event {
+  string data = 1;
+} 

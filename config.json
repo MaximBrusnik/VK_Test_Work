@@ -1,0 +1,20 @@
+{
+  "server": {
+    "port": 8080,
+    "host": "0.0.0.0",
+    "graceful_shutdown_timeout": "30s",
+    "max_concurrent_streams": 100
+  },
+  "log": {
+    "level": "info",
+    "format": "json",
+    "output": "stdout",
+    "enable_caller": true,
+    "timestamp_format": "2006-01-02 15:04:05"
+  },
+  "pubsub": {
+    "max_subscribers_per_key": 1000,
+    "message_buffer_size": 100,
+    "cleanup_interval": "5m"
+  }
+} 
